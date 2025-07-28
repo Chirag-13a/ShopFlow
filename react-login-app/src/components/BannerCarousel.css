@@ -1,0 +1,18 @@
+.banner-carousel {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 0;
+}
+
+.banner-image {
+  width: 90% !important;  /* or 100% for full width */
+  max-width: 1200px;
+  border-radius: 10px;
+  display: block;
+  margin: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
