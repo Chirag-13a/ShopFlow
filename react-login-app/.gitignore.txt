@@ -1,0 +1,6 @@
+SHOPFLOW/node_modules/
+SHOPFLOW/backend/node_modules/
+SHOPFLOW/.env
+SHOPFLOW/backend/.env
+SHOPFLOW/backend/uploads/
+SHOPFLOW/public/images/ 

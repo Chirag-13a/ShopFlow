@@ -345,7 +345,7 @@ body {
   gap: 40px;
   max-width: 1200px;
   margin: 40px auto;
-  background: #fff;
+  background: var(--color-card);
   border-radius: 18px;
   box-shadow: 0 8px 32px rgba(26,35,126,0.10);
   padding: 36px 32px;
@@ -934,7 +934,7 @@ body {
   z-index: 2000;
 }
 .cart-modal-box {
-  background: #fff;
+  background: var(--color-surface);
   border-radius: 18px;
   box-shadow: 0 8px 32px rgba(30,40,90,0.14);
   padding: 0;
@@ -1100,4 +1100,84 @@ body.dark-mode .cart-img {
 }
 body.dark-mode .cart-remove-btn {
   background: var(--color-bg);
+}
+
+/* Add pastel background color classes for light mode */
+.pastel-bg-1 { background: #f3f8ff; }
+.pastel-bg-2 { background: #fff7e6; }
+.pastel-bg-3 { background: #f6fff7; }
+.pastel-bg-4 { background: #fff3f8; }
+.pastel-bg-5 { background: #f9f7ff; }
+.pastel-bg-6 { background: #f7fff9; }
+
+/* Enhance card shadow and border in light mode */
+.category-card, .brand-card, .product-card {
+  box-shadow: 0 4px 24px rgba(30,40,90,0.10);
+  border: 1.5px solid #e0e0e0;
+  border-radius: 18px;
+  /* Remove hardcoded background, use pastel classes or var(--color-card) as fallback */
+  background: var(--color-card);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+/* Example: Apply pastel backgrounds in a grid (JS/React can rotate these classes) */
+/*
+<div className={`category-card pastel-bg-${(index % 6) + 1}`}>...</div>
+*/
+
+/* Keep text dark for contrast */
+.category-card-title, .brand-card-title, .product-title {
+  color: #232f3e;
+}
+
+/* Add a more visible border to image circles in cards */
+.category-card-img-wrap, .brand-card-img-wrap {
+  border: 3px solid #ffd700; /* Gold for light mode */
+}
+body.dark-mode .category-card-img-wrap, body.dark-mode .brand-card-img-wrap {
+  border: 3px solid #64ffda; /* Teal for dark mode */
+}
+
+/* Add a more visible border to cards */
+.category-card, .brand-card {
+  border: 2.5px solid #ffd700; /* Gold for light mode */
+}
+body.dark-mode .category-card, body.dark-mode .brand-card {
+  border: 2.5px solid #64ffda; /* Teal for dark mode */
+}
+
+/* Add borders to product cards */
+.product-card {
+  border: 2.5px solid #ffd700; /* Gold for light mode */
+}
+body.dark-mode .product-card {
+  border: 2.5px solid #64ffda; /* Teal for dark mode */
+}
+
+/* Add borders to product images */
+.product-card img {
+  border: 2px solid #ffd700; /* Gold for light mode */
+  border-radius: 8px;
+}
+body.dark-mode .product-card img {
+  border: 2px solid #64ffda; /* Teal for dark mode */
+  border-radius: 8px;
+}
+
+/* Add borders to square cards (product page cards) */
+.square-card {
+  border: 2.5px solid #ffd700; /* Gold for light mode */
+}
+body.dark-mode .square-card {
+  border: 2.5px solid #64ffda; /* Teal for dark mode */
+}
+
+/* Add borders to square card images */
+.square-img {
+  border: 2px solid #ffd700; /* Gold for light mode */
+  border-radius: 8px;
+}
+body.dark-mode .square-img {
+  border: 2px solid #64ffda; /* Teal for dark mode */
+  border-radius: 8px;
 }

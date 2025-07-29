@@ -38,8 +38,7 @@ const Header = () => {
       <div className="header-container">
         {/* Logo */}
         <div className="logo" onClick={() => navigate('/adpage')}>
-          <span style={{ fontSize: 34, verticalAlign: 'middle' }}>🛒</span>
-          <span>INVENTORY</span>
+          🛒 SHOPFLOW
         </div>
         {/* Navigation */}
         <nav className="nav-links">

@@ -19,7 +19,7 @@
 .floating-chat-box {
   width: 400px;
   max-height: 400px;
-  background: white;
+  background: var(--color-surface);
   border-radius: 12px;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
   overflow-y: auto;

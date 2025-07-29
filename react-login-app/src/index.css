@@ -27,17 +27,36 @@ body, .modern-header, .header-container, .checkout-container, .section {
 }
 
 .dark-mode {
-  --color-primary: #7ecfff; /* Brighter blue */
-  --color-accent: #ffb86b; /* Soft orange accent */
-  --color-success: #43a047;
-  --color-danger: #e57373;
-  --color-bg: #181c24; /* Deep blue-gray background */
-  --color-surface: #222836; /* Slightly lighter than bg for surfaces */
-  --color-card: #232733; /* Darker card for better contrast */
-  --color-text: #e3eaf7; /* Soft light text */
+  --color-primary: #ffd700;      /* Gold */
+  --color-accent: #ff9800;       /* Orange accent */
+  --color-success: #43e97b;
+  --color-danger: #ff5370;
+  --color-bg: #181818;           /* Almost black */
+  --color-surface: #232323;      /* Dark gray for surfaces */
+  --color-card: #232323;         /* Match surface for cards */
+  --color-text: #ececec;         /* Off-white for text */
   --color-text-secondary: #b0b8c1;
-  --color-border: #353b48; /* Slightly lighter border for separation */
-  --color-footer: #232f3e; /* Consistent footer color */
+  --color-border: #353535;
+  --color-footer: #232f3e;
+}
+
+/* Card shadow for dark mode */
+.dark-mode .category-card, .dark-mode .brand-card, .dark-mode .product-card {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.45);
+  background: var(--color-card);
+  border: 1.5px solid var(--color-border);
+}
+
+.dark-mode .category-card-title, .dark-mode .brand-card-title, .dark-mode .product-title {
+  color: var(--color-text);
+}
+
+.dark-mode .category-heading, .dark-mode .brand-heading, .dark-mode h1, .dark-mode h2 {
+  color: var(--color-primary);
+}
+
+.dark-mode .category-card-title::after, .dark-mode .brand-card-title::after {
+  background: var(--color-primary);
 }
 a { color: var(--color-primary); text-decoration: none; transition: color 0.2s; }
 a:hover { color: var(--color-accent); }

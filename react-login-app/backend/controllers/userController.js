@@ -52,7 +52,7 @@ exports.googleSignup = async (req, res) => {   // ye api google ke through signu
       await sendEmail(
         email,
         "Google Signup OTP",
-        `Hello ${name},\n\nYour OTP is: ${otp}\nIt will expire in 10 minutes.\n\n– Team E-commerce`
+        `Hello ${name},\n\nYour OTP is: ${otp}\nIt will expire in 10 minutes.\n\n– Team SHOPFLOW`
       );
 
       return res.status(201).json({
@@ -71,7 +71,7 @@ exports.googleSignup = async (req, res) => {   // ye api google ke through signu
       await sendEmail(
         email,
         "Google Signup OTP (Resent)",
-        `Hello ${user.name},\n\nYour OTP is: ${otp}\nIt will expire in 10 minutes.\n\n– Team E-commerce`
+        `Hello ${user.name},\n\nYour OTP is: ${otp}\nIt will expire in 10 minutes.\n\n– Team SHOPFLOW`
       );
 
       return res.status(200).json({
@@ -185,7 +185,7 @@ exports.registerUser = async (req, res) => {   // use to register new user
     await sendEmail(
       email,
       "  Email Verification",
-      `Hello ${name},\n\nYour OTP is: ${otp}\nIt will expire in 10 minutes.\n\n– Team E-commerce`
+      `Hello ${name},\n\nYour OTP is: ${otp}\nIt will expire in 10 minutes.\n\n– Team SHOPFLOW`
     );
 
     res.status(201).json({
@@ -267,7 +267,7 @@ exports.googleLogin = async (req, res) => {  // google ke through login karna ke
       await sendEmail(
         email,
         " Google Login Notification",
-        `Hello ${user.name || "User"},\n\nYou have just logged in to your account using Google.\n\nIf this wasn't you, please secure your account.\n\n— Team E-commerce`
+        `Hello ${user.name || "User"},\n\nYou have just logged in to your account using Google.\n\nIf this wasn't you, please secure your account.\n\n— Team SHOPFLOW`
       );
     } catch (emailErr) {
       console.error(" Failed to send Google login email:", emailErr.message);

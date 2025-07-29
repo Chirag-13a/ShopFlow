@@ -27,22 +27,22 @@ A full-featured inventory management web application built using the MERN stack 
 
 ## 🛠️ Tech Stack
 
-### Frontend:
+### Frontend
 - React (with Hooks & Context API)
 - Axios for API calls
 - React Router DOM
-- CSS Modules or external stylesheets
+- CSS Modules / External Stylesheets
 
-### Backend:
+### Backend
 - Node.js
 - Express.js
 - MongoDB with Mongoose
-- JSON Web Tokens (JWT) for Authentication
-- Nodemailer for Email OTP
+- JSON Web Tokens (JWT)
+- Nodemailer for OTP Verification
 
-### Deployment:
+### Deployment
 - Frontend: **Vercel**
-- Backend: **Render** / **Railway** / **Local**
+- Backend: **Render / Railway / Local**
 
 ---
 
@@ -50,71 +50,54 @@ A full-featured inventory management web application built using the MERN stack 
 
 inventory-management/
 ├── backend/
-│ ├── config/ # DB & email configs
-│ ├── controllers/ # Route logic
-│ ├── middleware/ # Auth middlewares
-│ ├── models/ # Mongoose schemas
-│ ├── routes/ # API endpoints
-│ └── server.js # Entry point
+│   ├── config/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   └── server.js
 │
 ├── frontend/
-│ ├── public/
-│ ├── src/
-│ │ ├── components/
-│ │ ├── pages/
-│ │ ├── App.js
-│ │ └── index.js
-│ └── package.json
+│   ├── public/
+│   ├── src/
+│   ├── App.js
+│   └── package.json
 │
 ├── README.md
-└── .env (not included in repo)
-
+└── .env
 
 ---
 
-🔗 API Endpoints
-Auth Routes
-POST /api/signup – Register with OTP
+## 🔗 API Endpoints
 
-POST /api/login – Login with JWT
+### Auth Routes
+- POST /api/signup – Register with OTP
+- POST /api/login – Login with JWT
+- POST /api/verify-otp – Verify Email OTP
 
-POST /api/verify-otp – Verify Email OTP
+### Product Routes
+- GET /api/products – List all products
+- POST /api/products – Add Product
+- PUT /api/products/:id – Update Product
+- DELETE /api/products/:id – Delete Product
 
-Product Routes
-GET /api/products – List all products
+### Category / Brand Routes
+- GET /api/categories
+- POST /api/categories
+- GET /api/brands
+- POST /api/brands
 
-POST /api/products – Add product (Admin only)
+---
 
-PUT /api/products/:id – Update product
+## 🧠 Learning Goals
+- Full-stack CRUD Operations
+- JWT Authentication & Protected Routes
+- File Upload Handling
+- Real-Time UI Updates
+- Production-Ready Dashboard Design
 
-DELETE /api/products/:id – Delete product
+---
 
-Category & Brand Routes
-GET /api/categories
-
-POST /api/categories
-
-GET /api/brands
-
-POST /api/brands
-
-
-
-🧠 Learning Goals
-Hands-on experience with full-stack CRUD operations
-
-User authentication using JWT and protected routes
-
-Working with file uploads and real-time UI updates
-
-Designing a production-ready React dashboard
-
-
-
-🙌 Credits
-Built with ❤️ by Chirag Agarwal
-Project developed as part of internship learning and personal practice.
-
-
-
-
+## 🙌 Credits
+Built with ❤️ by **Chirag Agarwal**  
+Project developed for internship learning and personal practice.

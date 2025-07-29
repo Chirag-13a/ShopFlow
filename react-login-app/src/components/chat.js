@@ -4,7 +4,7 @@ const qaList = [
   { question: "What is your return policy?", answer: "You can return products within 7 days of delivery." },
   { question: "How to track my order?", answer: "Click on 'My Orders' > Select order > Track." },
   { question: "Do you offer Cash on Delivery?", answer: "Yes, COD is available on eligible products." },
-  { question: "Query not mention?", answer: "Please contact to customer service e-commerce@gmail.com"},
+  { question: "Query not mention?", answer: "Please contact to customer service shopflow@gmail.com"},
 ];
 
 const Chat = () => {

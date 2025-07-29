@@ -31,7 +31,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <div className="footer-logo"><Link to="/adpage">🛒 INVENTORY</Link></div>
+        <div className="footer-logo"><Link to="/adpage">🛒 SHOPFLOW</Link></div>
         <div className="footer-copy">&copy; {new Date().getFullYear()} All rights reserved.</div>
       </div>
     </footer>

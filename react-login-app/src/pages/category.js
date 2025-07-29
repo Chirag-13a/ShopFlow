@@ -48,8 +48,8 @@ const Category = () => {
       <div className="category-grid">
         {categories
           .filter((cat) => cat.name.toLowerCase().includes(searchTerm.toLowerCase()))
-          .map((cat) => (
-            <div key={cat._id} className="category-card" onClick={() => navigate(`/products?category=${encodeURIComponent(cat.name)}`)}>
+          .map((cat, idx) => (
+            <div key={cat._id} className={`category-card pastel-bg-${(idx % 6) + 1}`} onClick={() => navigate(`/products?category=${encodeURIComponent(cat.name)}`)}>
               <div className="category-card-img-wrap">
                 <img
                   src={`http://localhost:5000/uploads/${cat.image || ''}`}
