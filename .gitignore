@@ -1,0 +1,42 @@
+# Node.js dependencies
+node_modules/
+react-login-app/node_modules/
+react-login-app/backend/node_modules/
+
+# dotenv environment files
+.env
+.env.*
+react-login-app/.env
+react-login-app/backend/.env
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build output
+dist/
+build/
+
+# Coverage
+coverage/
+
+# Optional: uploads (if you don't want to track uploaded images)
+react-login-app/backend/uploads/
+
+# Optional: ignore public/images if it's only for static assets
+react-login-app/public/images/
+
+# Optional: ignore test coverage
+*.lcov
+
+# Optional: ignore package-lock.json/yarn.lock if you don't want to track lock files
+# package-lock.json
+yarn.lock

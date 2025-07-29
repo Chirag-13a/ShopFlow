@@ -9,10 +9,13 @@ const sendEmail = require("../utils/sendEmail");
 exports.getAllUsers = async (req, res) => {  // ye user page pe users ko show karna ka kam ate hai
   try {
     console.log("Received request to fetch all users...");
+    console.log("User making request:", req.user); // Debug: Log the authenticated user
+    console.log("Request headers:", req.headers); // Debug: Log request headers
 
     const users = await User.find();
 
     console.log(`Total users found: ${users.length}`);
+    console.log("Users data:", users); // Debug: Log the actual users data
     res.json(users);
 
   } catch (err) {

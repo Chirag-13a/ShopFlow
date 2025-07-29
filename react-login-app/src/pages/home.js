@@ -14,11 +14,18 @@ const Home = () => {      // home ke function ko define kara hian
 
   // Prevent leaving /home by URL change or browser navigation unless intent is set
   useEffect(() => {
+    console.log("Current role:", role); // Debug: Log the current role
+    console.log("Role type:", typeof role); // Debug: Log the type of role
+    
     // Redirect non-admin users to /products
     if (role !== "admin") {
+      console.log("User is not admin, redirecting to /products"); // Debug: Log redirect
       navigate("/products", { replace: true });
       return;
     }
+    
+    console.log("User is admin, staying on /home"); // Debug: Log admin access
+    
     // Prevent leaving /home by URL change or browser navigation unless intent is set
     if (location.pathname !== "/home") {
       if (!(location.state && location.state.navigation_intent)) {
@@ -35,19 +42,35 @@ const Home = () => {      // home ke function ko define kara hian
 
   // Fetch all users
   useEffect(() => { // useEffect hook ka use kar rahe hain jo component mount hone par call hota 
+    console.log("Home component mounted, fetching users..."); // Debug: Log component mount
     fetchUsers(); // fetchUsers function ko call karte hain jo users ko fetch karega
   }, []);
 
   const fetchUsers = () => {
     const token = localStorage.getItem("token");  //  token ko localStorage se le rahe hain
+    console.log("Token:", token); // Debug: Check if token exists
+    console.log("Fetching users..."); // Debug: Log the request
+    
+    if (!token) {
+      console.error("No token found in localStorage");
+      return;
+    }
+    
     axios   // ye GET request send karta hai to display all users
       .get("http://localhost:5000/api/users", {
         headers: {
           Authorization: `Bearer ${token}`  //  header me token bhej rahe hain
         }
       })
-      .then((res) => setUsers(res.data))
-      .catch((err) => console.error(" Error fetching users:", err));
+      .then((res) => {
+        console.log("Users fetched successfully:", res.data); // Debug: Log successful response
+        setUsers(res.data);
+      })
+      .catch((err) => {
+        console.error(" Error fetching users:", err);
+        console.error("Error response:", err.response?.data); // Debug: Log error details
+        console.error("Error status:", err.response?.status); // Debug: Log status code
+      });
   };
 
   // 🗑 Delete a user
