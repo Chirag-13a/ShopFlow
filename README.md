@@ -1,4 +1,4 @@
-# 📦 Inventory Management System
+# ShopFlow
 
 A full-featured inventory management web application built using the MERN stack (MongoDB, Express, React, Node.js). The system allows users to manage products, categories, stock levels, and provides an admin dashboard with full CRUD functionality and authentication.
 
