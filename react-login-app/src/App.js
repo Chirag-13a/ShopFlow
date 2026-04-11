@@ -68,7 +68,7 @@ function App() {
               </PrivateRoute>
             }
           >
-            <Route path="/home" element={<Home />} />
+            <Route path="/home" element={<Home />} /> // user page
             <Route path="/products" element={<Products />} />
             <Route path="/product/:id" element={<ProductDetail />} />
             <Route path="/category" element={<Category />} />
@@ -76,7 +76,7 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/aboutus" element={<About />} />
-            <Route path="/adpage" element={<AdPage/>}/>
+            <Route path="/adpage" element={<AdPage/>}/> // home page
           </Route>
 
           {/* Fallback route */}

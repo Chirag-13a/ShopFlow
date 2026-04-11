@@ -42,7 +42,7 @@ const Brand = () => {
           type="text"
           placeholder="Search brands..."
           value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={(e) => setSearchTerm(e.target.value)} 
         />
       </div>
       <div className="brand-grid">

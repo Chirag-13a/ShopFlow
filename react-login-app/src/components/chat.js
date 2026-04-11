@@ -5,6 +5,7 @@ const qaList = [
   { question: "How to track my order?", answer: "Click on 'My Orders' > Select order > Track." },
   { question: "Do you offer Cash on Delivery?", answer: "Yes, COD is available on eligible products." },
   { question: "Query not mention?", answer: "Please contact to customer service shopflow@gmail.com"},
+  { question: "just aded", answer: "just added "},
 ];
 
 const Chat = () => {
