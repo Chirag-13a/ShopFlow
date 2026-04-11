@@ -27,7 +27,7 @@ const {
 
 router.get("/test-email", async (req, res) => {
   try {
-    await sendEmail("your-email@gmail.com", "Test Email", "This is a test from Chirag’s app.");
+    await sendEmail(process.env.SENDER_EMAIL, "Test Email", "This is a test from Chirag's app.");
     console.log("Test email sent successfully");
     res.send(" Test email sent");
   } catch (err) {

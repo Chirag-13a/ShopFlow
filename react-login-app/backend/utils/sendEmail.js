@@ -79,6 +79,7 @@ const sendEmail = async (to, subject, text, html) => {
     if (error.response) {
       console.error("SMTP Error Response:", error.response);
     }
+    throw error;
   }
 };
 
